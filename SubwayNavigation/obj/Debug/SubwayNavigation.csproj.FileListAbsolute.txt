@@ -1,0 +1,28 @@
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\bin\Debug\SubwayNavigation.exe.config
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\bin\Debug\SubwayNavigation.exe
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\bin\Debug\SubwayNavigation.pdb
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\App.g.cs
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation_MarkupCompile.cache
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation_MarkupCompile.lref
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.g.resources
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.Properties.Resources.resources
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csproj.GenerateResource.Cache
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.exe
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.pdb
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\MainWindow.g.cs
+c:\users\алёна\documents\visual studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\MainWindow.baml
+C:\Users\Алёна\Documents\Visual Studio 2015\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csprojResolveAssemblyReference.cache
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\bin\Debug\SubwayNavigation.exe.config
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.exe
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.pdb
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\bin\Debug\SubwayNavigation.exe
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\bin\Debug\SubwayNavigation.pdb
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csprojResolveAssemblyReference.cache
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\MainWindow.g.cs
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\App.g.cs
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation_MarkupCompile.cache
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation_MarkupCompile.lref
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\MainWindow.baml
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.g.resources
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.Properties.Resources.resources
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csproj.GenerateResource.Cache

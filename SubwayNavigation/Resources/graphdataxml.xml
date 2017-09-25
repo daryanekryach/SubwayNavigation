@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<subway>
+	<stations>
+		<station id="0" line="green">
+			<nameRu>Красный Хутор</nameRu>
+			<nameEng>Chervony Khutir</nameEng>
+			<railways>1</railways>
+			<location>438,360.3</location>
+		</station>
+		<station id="1" line="green">
+			<nameRu>Бориспольская</nameRu>
+			<nameEng>Boryspilska</nameEng>
+			<railways>0, 2</railways>
+			<location>423,345.3</location>
+		</station>
+		<station id="2" line="green">
+			<nameRu>Вырлица</nameRu>
+			<nameEng>Vyrlytsia</nameEng>
+			<railways>1, 3 </railways>
+			<location>408,330.3</location>
+		</station>
+		<station id="3" line="green">
+			<nameRu>Харьковская</nameRu>
+			<nameEng>Kharkivska</nameEng>
+			<railways>2, 4</railways>
+			<location>393,315.3</location>
+		</station>
+		<station id="4" line="green">
+			<nameRu>Позняки</nameRu>
+			<nameEng>Pozniaky</nameEng>
+			<railways>3, 5</railways>
+			<location>378,300.3</location>
+		</station>
+		<station id="5" line="green">
+			<nameRu>Осокорки</nameRu>
+			<nameEng>Osokorky</nameEng>
+			<railways>4, 6</railways>
+			<location>363,285.3</location>
+		</station>
+		<station id="6" line="green">
+			<nameRu>Славутич</nameRu>
+			<nameEng>Slavutych</nameEng>
+			<railways>5, 7</railways>
+			<location>348,270.3</location>
+		</station>
+		<station id="7" line="green">
+			<nameRu>Выдубичи</nameRu>
+			<nameEng>Vydubychi</nameEng>
+			<railways>6, 8</railways>
+			<location>333,255.3</location>
+		</station>
+		<station id="8" line="green">
+			<nameRu>Дружбы Народов</nameRu>
+			<nameEng>Druzhby Narodiv</nameEng>
+			<railways>7, 9</railways>
+			<location>318,240.3</location>
+		</station>
+		<station id="9" line="green">
+			<nameRu>Печерская</nameRu>
+			<nameEng>Pecherska</nameEng>
+			<railways>8, 10</railways>
+			<location>303,224.3</location>
+		</station>
+		<station id="10" line="green">
+			<nameRu>Кловская</nameRu>
+			<nameEng>Klovska</nameEng>
+			<railways>9, 11</railways>
+			<location>284,215.5</location>
+		</station>
+		<station id="11" line="green">
+			<nameRu>Дворец Спорта</nameRu>
+			<nameEng>Palats Sportu </nameEng>
+			<railways>10, 12, 17</railways>
+			<location>253,215.5</location>
+		</station>
+		<station id="12" line="green">
+			<nameRu>Золотые Ворота</nameRu>
+			<nameEng>Zoloti Vorota</nameEng>
+			<railways>11, 13, 16</railways>
+			<location>217,198.3</location>
+		</station>
+		<station id="13" line="green">
+			<nameRu>Лукьяновская</nameRu>
+			<nameEng>Lukianivska</nameEng>
+			<railways>12, 14</railways>
+			<location>199.5,181</location>
+		</station>
+		<station id="14" line="green">
+			<nameRu>Дорогожичи</nameRu>
+			<nameEng>Dorohozhychi</nameEng>
+			<railways>13, 15</railways>
+			<location>183,165</location>
+		</station>
+		<station id="15" line="green">
+			<nameRu>Сырец</nameRu>
+			<nameEng>Syrets</nameEng>
+			<railways>14</railways>
+			<location>167,150</location>
+		</station>
+		<station id="16" line="red">
+			<nameRu>Театральная</nameRu>
+			<nameEng>Teatralna </nameEng>
+			<railways>12, 18, 27</railways>
+			<location>232.5,198.5</location>
+		</station>
+		<station id="17" line="blue">
+			<nameRu>Площадь Льва Толстого</nameRu>
+			<nameEng>Ploshcha Lva Tolstoho</nameEng>
+			<railways>11, 35, 44</railways>
+			<location>264,225</location>
+		</station>
+		<station id="18" line="red">
+			<nameRu>Университет</nameRu>
+			<nameEng>Universytet</nameEng>
+			<railways>16, 19</railways>
+			<location>200,216.4</location>
+		</station>
+		<station id="19" line="red">
+			<nameRu>Вокзальная</nameRu>
+			<nameEng>Vokzalna</nameEng>
+			<railways>18, 20</railways>
+			<location>179,216.4</location>
+		</station>
+		<station id="20" line="red">
+			<nameRu>Политехнический Институт</nameRu>
+			<nameEng>Politekhnichnyi Instytut</nameEng>
+			<railways>19, 21</railways>
+			<location>158,216.4</location>
+		</station>
+		<station id="21" line="red">
+			<nameRu>Шулявская</nameRu>
+			<nameEng>Shuliavska</nameEng>
+			<railways>20, 22</railways>
+			<location>137,216.4</location>
+		</station>
+		<station id="22" line="red">
+			<nameRu>Берестейская</nameRu>
+			<nameEng>Beresteiska</nameEng>
+			<railways>21, 23</railways>
+			<location>116,216.4</location>
+		</station>
+		<station id="23" line="red">
+			<nameRu>Нивки</nameRu>
+			<nameEng>Nyvky</nameEng>
+			<railways>22, 24</railways>
+			<location>96,216.4</location>
+		</station>
+		<station id="24" line="red">
+			<nameRu>Святошин</nameRu>
+			<nameEng>Sviatoshyn</nameEng>
+			<railways>23, 25</railways>
+			<location>75,216.4</location>
+		</station>
+		<station id="25" line="red">
+			<nameRu>Житомирская</nameRu>
+			<nameEng>Zhytomyrska</nameEng>
+			<railways>24, 26</railways>
+			<location>54,216.4</location>
+		</station>
+		<station id="26" line="red">
+			<nameRu>Академгородок</nameRu>
+			<nameEng>Akademmistechko</nameEng>
+			<railways>25</railways>
+			<location>33,216.4</location>
+		</station>
+		<station id="27" line="red">
+			<nameRu>Крещатик</nameRu>
+			<nameEng>Khreshchatyk </nameEng>
+			<railways>16, 28, 44</railways>
+			<location>253,194</location>
+		</station>
+		<station id="28" line="red">
+			<nameRu>Арсенальная</nameRu>
+			<nameEng>Arsenalna</nameEng>
+			<railways>27, 29</railways>
+			<location>281,194</location>
+		</station>
+		<station id="29" line="red">
+			<nameRu>Днепр</nameRu>
+			<nameEng>Dnipro</nameEng>
+			<railways>28, 30</railways>
+			<location>302,194</location>
+		</station>
+		<station id="30" line="red">
+			<nameRu>Гидропарк</nameRu>
+			<nameEng>Hidropark</nameEng>
+			<railways>29, 31</railways>
+			<location>323,194</location>
+		</station>
+		<station id="31" line="red">
+			<nameRu>Левобережная</nameRu>
+			<nameEng>Livoberezhna</nameEng>
+			<railways>30, 32</railways>
+			<location>344,194</location>
+		</station>
+		<station id="32" line="red">
+			<nameRu>Дарница</nameRu>
+			<nameEng>Darnytsia</nameEng>
+			<railways>31, 33</railways>
+			<location>365,194</location>
+		</station>
+		<station id="33" line="red">
+			<nameRu>Черниговская</nameRu>
+			<nameEng>Chernihivska</nameEng>
+			<railways>32, 34</railways>
+			<location>386,194</location>
+		</station>
+		<station id="34" line="red">
+			<nameRu>Лесная</nameRu>
+			<nameEng>Lisova</nameEng>
+			<railways>33</railways>
+			<location>407,194</location>
+		</station>
+		<station id="35" line="blue">
+			<nameRu>Олимпийская</nameRu>
+			<nameEng>Olimpiiska</nameEng>
+			<railways>17, 36</railways>
+			<location>264,246</location>
+		</station>
+		<station id="36" line="blue">
+			<nameRu>Дворец "Украина"</nameRu>
+			<nameEng>Palats "Ukrayina"</nameEng>
+			<railways>35, 37</railways>
+			<location>264,267</location>
+		</station>
+		<station id="37" line="blue">
+			<nameRu>Лыбидская</nameRu>
+			<nameEng>Lybidska</nameEng>
+			<railways>36, 38</railways>
+			<location>264,288</location>
+		</station>
+		<station id="38" line="blue">
+			<nameRu>Демеевская</nameRu>
+			<nameEng>Demiivska</nameEng>
+			<railways>37, 39</railways>
+			<location>264,309</location>
+		</station>
+		<station id="39" line="blue">
+			<nameRu>Голосеевская</nameRu>
+			<nameEng>Holosiivska</nameEng>
+			<railways>38, 40</railways>
+			<location>246,320.2</location>
+		</station>
+		<station id="40" line="blue">
+			<nameRu>Васильковская</nameRu>
+			<nameEng>Vasylkivska</nameEng>
+			<railways>39, 41</railways>
+			<location>225,320.2</location>
+		</station>
+		<station id="41" line="blue">
+			<nameRu>Выставочный Центр</nameRu>
+			<nameEng>Vystavkovyi Tsentr</nameEng>
+			<railways>40, 42</railways>
+			<location>204,320.2</location>
+		</station>
+		<station id="42" line="blue">
+			<nameRu>Ипподром</nameRu>
+			<nameEng>Ipodrom</nameEng>
+			<railways>41, 43</railways>
+			<location>184,320.2</location>
+		</station>
+		<station id="43" line="blue">
+			<nameRu>Теремки</nameRu>
+			<nameEng>Teremky</nameEng>
+			<railways>42</railways>
+			<location>163,320.2</location>
+		</station>
+		<station id="44" line="blue">
+			<nameRu>Площадь Независимости</nameRu>
+			<nameEng>Maidan Nezalezhnosti</nameEng>
+			<railways>17, 27, 45</railways>
+			<location>264,183</location>
+		</station>
+		<station id="45" line="blue">
+			<nameRu>Почтовая Площадь</nameRu>
+			<nameEng>Poshtova Ploshcha</nameEng>
+			<railways>44, 46</railways>
+			<location>264,162</location>
+		</station>
+		<station id="46" line="blue">
+			<nameRu>Контрактовая Площадь</nameRu>
+			<nameEng>Kontraktova Ploshcha</nameEng>
+			<railways>45, 47</railways>
+			<location>264,141</location>
+		</station>
+		<station id="47" line="blue">
+			<nameRu>Тараса Шевченка</nameRu>
+			<nameEng>Tarasa Shevchenka</nameEng>
+			<railways>46, 48</railways>
+			<location>264,120</location>
+		</station>
+		<station id="48" line="blue">
+			<nameRu>Петровка</nameRu>
+			<nameEng>Petrivka</nameEng>
+			<railways>47, 49</railways>
+			<location>264,99</location>
+		</station>
+		<station id="49" line="blue">
+			<nameRu>Оболонь</nameRu>
+			<nameEng>Obolon</nameEng>
+			<railways>48, 50</railways>
+			<location>264,78</location>
+		</station>
+		<station id="50" line="blue">
+			<nameRu>Минская</nameRu>
+			<nameEng>Minska</nameEng>
+			<railways>49, 51</railways>
+			<location>264,57</location>
+		</station>
+		<station id="51" line="blue">
+			<nameRu>Героев Днепра</nameRu>
+			<nameEng>Heroiv Dnipra</nameEng>
+			<railways>50</railways>
+			<location>264,36</location>
+		</station>
+		
+	</stations>
+</subway>
