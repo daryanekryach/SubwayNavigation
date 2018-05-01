@@ -21,7 +21,6 @@ namespace SubwayNavigation
         public List<Station> GetShortestPath(Station startStation, Station destinationStation)
         {
             Queue<Station> queue = new Queue<Station>();
-            List<Station> visited = new List<Station>();
             List<Station> path = new List<Station>();
             Dictionary<int, int> previous = new Dictionary<int, int>();
             queue.Enqueue(startStation);
@@ -46,7 +45,7 @@ namespace SubwayNavigation
             {
                 path.Add(currentStation);
                 currentStation = stations[previous[currentStation.stationId]];
-            };
+            }
 
             path.Add(startStation);
             path.Reverse();
@@ -56,7 +55,6 @@ namespace SubwayNavigation
 
         public void GetGraphDataFromXML()
         {
-            Assembly assembly = Assembly.GetExecutingAssembly();
             XDocument graphData = XDocument.Parse(Properties.Resources.graphdataxml);
 
             foreach (XElement station in graphData.Descendants("station"))
@@ -73,10 +71,12 @@ namespace SubwayNavigation
             }
 
             foreach (Station station in stations)
+            {
                 railwayList.Add(station.stationId, station.stationRailways);
+            }
         }
 
-        private List<int> FormateRailwayData(string[] data)
+        private static List<int> FormateRailwayData(string[] data)
         {
             List<int> railways = new List<int>();
             for (int i = 0; i < data.Length; i++)
@@ -86,7 +86,7 @@ namespace SubwayNavigation
             return railways;
         }
 
-        private double[] GetStationLocation(string[] locationData)
+        private static double[] GetStationLocation(string[] locationData)
         {
             double[] location = new double[2];
             for (int i = 0; i < locationData.Length; i++)
@@ -96,7 +96,7 @@ namespace SubwayNavigation
             return location;
         }
 
-        private void SetStationLineColor(Station station)
+        private static void SetStationLineColor(Station station)
         {
             var projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string filePath = Path.Combine(projectPath, "Resources");

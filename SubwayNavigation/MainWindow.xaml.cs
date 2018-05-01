@@ -32,7 +32,8 @@ namespace SubwayNavigation
             FillComboBoxes();
 
             RegisterName("movingPoint", movingPoint);
-            movingPoint.RadiusX = movingPoint.RadiusY = radius;
+            movingPoint.RadiusX = radius;
+            movingPoint.RadiusY = radius;
         }
 
         /// <summary>
@@ -76,7 +77,9 @@ namespace SubwayNavigation
                         way[i].stationStatus = filePath + "\\" + way[i].stationLine + "-passage.png";
                     }
                     else
+                    {
                         way[i].stationStatus = filePath + "\\" + way[i].stationLine + "-normal.png";
+                    }
                 }
             }
             lvWay.ItemsSource = way;
@@ -103,8 +106,6 @@ namespace SubwayNavigation
             {
                 way.Points.Add(pathPoints[i]);
             }
-
-            PathFigure path = new PathFigure();
             way.StrokeDashArray = new DoubleCollection() { 0.2 };
             Panel.SetZIndex(way, 2);
             canvasSubway.Children.Add(way);
@@ -116,7 +117,7 @@ namespace SubwayNavigation
         /// </summary>
         /// <param name="resultPath"></param>
         /// <returns></returns>
-        public List<Point> DetalizePathDisplaying(List<Station> resultPath)
+        public static List<Point> DetalizePathDisplaying(List<Station> resultPath)
         {
             List<Point> pathPoints = new List<Point>();
             for (int i = 0; i < resultPath.Count; i++)
@@ -219,63 +220,10 @@ namespace SubwayNavigation
                         stationLabel = HandleBlueLineStation(st, stationLabel);
                         break;
                     case "red":
-                        if (st.stationId >= 18 && st.stationId < 27)
-                        {
-                            Canvas.SetLeft(stationLabel, st.stationLocation.X);
-                            Canvas.SetTop(stationLabel, st.stationLocation.Y - 3);
-                            stationLabel.RenderTransform = new RotateTransform(30);
-                        }
-                        else if (st.stationId == 16)
-                        {
-                            Canvas.SetLeft(stationLabel, st.stationLocation.X - 20);
-                            Canvas.SetTop(stationLabel, st.stationLocation.Y - 40);
-                            stationLabel.RenderTransform = new RotateTransform(45);
-                        }
-                        else if (st.stationId == 27)
-                        {
-                            Canvas.SetLeft(stationLabel, st.stationLocation.X - 30);
-                            Canvas.SetTop(stationLabel, st.stationLocation.Y - 50);
-                            stationLabel.RenderTransform = new RotateTransform(45);
-                        }
-                        else
-                        {
-                            Canvas.SetLeft(stationLabel, st.stationLocation.X - 10);
-                            Canvas.SetTop(stationLabel, st.stationLocation.Y - 15);
-                            stationLabel.RenderTransform = new RotateTransform(-30);
-                        }
+                        stationLabel = HandleRedLineStation(st, stationLabel);
                         break;
                     case "green":
-                        Canvas.SetLeft(stationLabel, st.stationLocation.X + 2);
-                        Canvas.SetTop(stationLabel, st.stationLocation.Y - 13);
-                        if (st.stationId >= 12)
-                        {
-                            Canvas.SetTop(stationLabel, st.stationLocation.Y - 8);
-                            if (st.stationId == 12)
-                            {
-                                Canvas.SetLeft(stationLabel, st.stationLocation.X - 56);
-                            }
-                            else if (st.stationId == 13)
-                            {
-                                Canvas.SetLeft(stationLabel, st.stationLocation.X - 50);
-                            }
-                            else if (st.stationId == 14)
-                            {
-                                Canvas.SetLeft(stationLabel, st.stationLocation.X - 58);
-                            }
-                            else if (st.stationId == 15)
-                            { Canvas.SetLeft(stationLabel, st.stationLocation.X - 32); }
-                        }
-                        else if (st.stationId == 10)
-                        {
-                            Canvas.SetLeft(stationLabel, st.stationLocation.X - 2);
-                            Canvas.SetTop(stationLabel, st.stationLocation.Y - 17);
-                        }
-                        else if (st.stationId == 11)
-                        {
-                            Canvas.SetLeft(stationLabel, st.stationLocation.X - 48);
-                            Canvas.SetTop(stationLabel, st.stationLocation.Y + 1);
-                            stationLabel.RenderTransform = new RotateTransform(-5);
-                        }
+                        stationLabel = HandleGreenLineStation(st, stationLabel);
                         break;
                 }
                 canvasSubway.Children.Add(stationLabel);
@@ -305,13 +253,78 @@ namespace SubwayNavigation
             return stationLabel;
         }
 
+        private Label HandleRedLineStation(Station st, Label stationLabel)
+        {
+            if (st.stationId >= 18 && st.stationId < 27)
+            {
+                Canvas.SetLeft(stationLabel, st.stationLocation.X);
+                Canvas.SetTop(stationLabel, st.stationLocation.Y - 3);
+                stationLabel.RenderTransform = new RotateTransform(30);
+            }
+            else if (st.stationId == 16)
+            {
+                Canvas.SetLeft(stationLabel, st.stationLocation.X - 20);
+                Canvas.SetTop(stationLabel, st.stationLocation.Y - 40);
+                stationLabel.RenderTransform = new RotateTransform(45);
+            }
+            else if (st.stationId == 27)
+            {
+                Canvas.SetLeft(stationLabel, st.stationLocation.X - 30);
+                Canvas.SetTop(stationLabel, st.stationLocation.Y - 50);
+                stationLabel.RenderTransform = new RotateTransform(45);
+            }
+            else
+            {
+                Canvas.SetLeft(stationLabel, st.stationLocation.X - 10);
+                Canvas.SetTop(stationLabel, st.stationLocation.Y - 15);
+                stationLabel.RenderTransform = new RotateTransform(-30);
+            }
+            return stationLabel;
+        }
+
+        private Label HandleGreenLineStation(Station st, Label stationLabel)
+        {
+            Canvas.SetLeft(stationLabel, st.stationLocation.X + 2);
+            Canvas.SetTop(stationLabel, st.stationLocation.Y - 13);
+            if (st.stationId >= 12)
+            {
+                Canvas.SetTop(stationLabel, st.stationLocation.Y - 8);
+                if (st.stationId == 12)
+                {
+                    Canvas.SetLeft(stationLabel, st.stationLocation.X - 56);
+                }
+                else if (st.stationId == 13)
+                {
+                    Canvas.SetLeft(stationLabel, st.stationLocation.X - 50);
+                }
+                else if (st.stationId == 14)
+                {
+                    Canvas.SetLeft(stationLabel, st.stationLocation.X - 58);
+                }
+                else if (st.stationId == 15)
+                { Canvas.SetLeft(stationLabel, st.stationLocation.X - 32); }
+            }
+            else if (st.stationId == 10)
+            {
+                Canvas.SetLeft(stationLabel, st.stationLocation.X - 2);
+                Canvas.SetTop(stationLabel, st.stationLocation.Y - 17);
+            }
+            else if (st.stationId == 11)
+            {
+                Canvas.SetLeft(stationLabel, st.stationLocation.X - 48);
+                Canvas.SetTop(stationLabel, st.stationLocation.Y + 1);
+                stationLabel.RenderTransform = new RotateTransform(-5);
+            }
+            return stationLabel;
+        }
 
         /// <summary>
         /// Reset path displaying
         /// </summary>
         public void ResetPathDisplay()
         {
-            startStationMark.Stroke = endStationMark.Stroke = Brushes.Transparent;
+            startStationMark.Stroke = Brushes.Transparent;
+            endStationMark.Stroke = Brushes.Transparent; 
             RemoveWay("resultWay");
             lvWay.ItemsSource = null;
             movingPoint.RadiusX = 0;
@@ -328,10 +341,10 @@ namespace SubwayNavigation
         public void AnimatePath(List<Station> way)
         {
             int pathStartId = stationsPathMark.FindIndex(x => x.Name == startStationMark.Name);
-            int pathEndId = stationsPathMark.FindIndex(x => x.Name == endStationMark.Name);
 
             System.Windows.Shapes.Path movingObjectPath = new System.Windows.Shapes.Path();
-            movingPoint.RadiusX = movingPoint.RadiusY = radius;
+            movingPoint.RadiusX = radius;
+            movingPoint.RadiusY = radius;
             Panel.SetZIndex(movingObjectPath, 6);
             movingObjectPath.Data = movingPoint;
             movingObjectPath.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#F5B700"));
@@ -353,8 +366,13 @@ namespace SubwayNavigation
             PointAnimationUsingPath animation = new PointAnimationUsingPath();
             animation.PathGeometry = animationPath;
             if (way.Count <= 6)
+            {
                 animation.Duration = TimeSpan.FromSeconds(1);
-            else animation.Duration = TimeSpan.FromSeconds(3.5);
+            }
+            else
+            {
+                animation.Duration = TimeSpan.FromSeconds(3.5);
+            }
 
             Storyboard.SetTargetName(animation, "movingPoint");
             Storyboard.SetTargetProperty(animation, new PropertyPath(EllipseGeometry.CenterProperty));
