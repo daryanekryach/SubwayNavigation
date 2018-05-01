@@ -5,9 +5,9 @@
 *.sln.docstates
 
 # Build results
-**/Debug/
-**/bin/
-**/obj/
+Debug/
+bin/
+obj/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -46,6 +46,5 @@
 # but keep track of directories ending in .cache
 !*.cache/
 
-
-# Common IntelliJ Platform excludes
+#JetBrains
 .idea/
