@@ -9,8 +9,14 @@ namespace SubwayNavigation
 {
     public class SubwayGraph
     {
-        public Dictionary<int, List<int>> railwayList = new Dictionary<int, List<int>>();
-        public List<Station> stations = new List<Station>();
+        public Dictionary<int, List<int>> railwayList { get; set; }
+        public List<Station> stations { get; set; }
+
+        public SubwayGraph()
+        {
+            railwayList = new Dictionary<int, List<int>>();
+            stations = new List<Station>();
+        }
 
         public List<Station> GetShortestPath(Station startStation, Station destinationStation)
         {
@@ -26,7 +32,9 @@ namespace SubwayNavigation
                 foreach (var node in railwayList[station.stationId])
                 {
                     if (previous.ContainsKey(node))
+                    {
                         continue;
+                    }
 
                     previous[node] = station.stationId;
                     queue.Enqueue(stations[node]);
@@ -92,7 +100,7 @@ namespace SubwayNavigation
         {
             var projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string filePath = Path.Combine(projectPath, "Resources");
-            station.stationLineColor = filePath + "\\"+ station.stationLine + ".png";
+            station.stationLineColor = filePath + "\\" + station.stationLine + ".png";
         }
     }
 }

@@ -1,0 +1,82 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+Debug/
+bin/
+obj/
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.cache
+# but keep track of directories ending in .cache
+!*.cache/
+
+
+# Common IntelliJ Platform excludes
+
+# User specific
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/shelf/*
+**/.idea/dictionaries
+
+# Sensitive or high-churn files
+**/.idea/**/dataSources/
+**/.idea/**/dataSources.ids
+**/.idea/**/dataSources.xml
+**/.idea/**/dataSources.local.xml
+**/.idea/**/sqlDataSources.xml
+**/.idea/**/dynamic.xml
+
+# Rider
+# Rider auto-generates .iml files, and contentModel.xml
+**/.idea/**/*.iml
+**/.idea/**/contentModel.xml
+**/.idea/**/modules.xml
+
+*.suo
+*.user
+.vs/
+bin/
+obj/
+_UpgradeReport_Files/
+packages/
+
+Thumbs.db
+Desktop.ini
+.DS_Store
