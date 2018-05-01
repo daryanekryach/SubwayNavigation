@@ -15,11 +15,11 @@ namespace SubwayNavigation
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SubwayGraph subwayGraph = new SubwayGraph();
+        private readonly SubwayGraph subwayGraph = new SubwayGraph();
         private readonly List<System.Windows.Shapes.Path> stationsPathMark = new List<System.Windows.Shapes.Path>();
         private List<Station> resultPath = new List<Station>();
-        private EllipseGeometry movingPoint = new EllipseGeometry();
-        private double radius = 6;
+        private readonly EllipseGeometry movingPoint = new EllipseGeometry();
+        private readonly double radius = 6;
 
         public MainWindow()
         {
@@ -106,7 +106,7 @@ namespace SubwayNavigation
             {
                 way.Points.Add(pathPoints[i]);
             }
-            way.StrokeDashArray = new DoubleCollection() { 0.2 };
+            way.StrokeDashArray = new DoubleCollection { 0.2 };
             Panel.SetZIndex(way, 2);
             canvasSubway.Children.Add(way);
             firstTime = false;
@@ -178,19 +178,19 @@ namespace SubwayNavigation
                 RegisterName(name, stationPath);
                 stationPath.Name = name;
                 stationPath.Data = new EllipseGeometry(st.stationLocation, radius, radius);
-                if (st.stationLine == "green")
+                switch (st.stationLine)
                 {
-                    stationPath.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#71BA51"));
+                    case "green":
+                        stationPath.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#71BA51"));
+                        break;
+                    case "blue":
+                        stationPath.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#2C82C9"));
+                        break;
+                    case "red":
+                        stationPath.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#D1213E")); break;
+                    default:
+                        break;
                 }
-                else if (st.stationLine == "blue")
-                {
-                    stationPath.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#2C82C9"));
-                }
-                else
-                {
-                    stationPath.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#D1213E"));
-                }
-
                 stationsPathMark.Add(stationPath);
 
             }
@@ -225,12 +225,14 @@ namespace SubwayNavigation
                     case "green":
                         stationLabel = HandleGreenLineStation(st, stationLabel);
                         break;
+                    default:
+                        break;
                 }
                 canvasSubway.Children.Add(stationLabel);
             }
         }
 
-        private Label HandleBlueLineStation(Station st, Label stationLabel)
+        private static Label HandleBlueLineStation(Station st, Label stationLabel)
         {
             if (st.stationId >= 39 && st.stationId <= 43)
             {
@@ -249,11 +251,11 @@ namespace SubwayNavigation
                 Canvas.SetLeft(stationLabel, st.stationLocation.X - 3);
                 Canvas.SetTop(stationLabel, st.stationLocation.Y - 10);
                 stationLabel.RenderTransform = new RotateTransform(-30);
-            };
+            }
             return stationLabel;
         }
 
-        private Label HandleRedLineStation(Station st, Label stationLabel)
+        private static Label HandleRedLineStation(Station st, Label stationLabel)
         {
             if (st.stationId >= 18 && st.stationId < 27)
             {
@@ -282,7 +284,7 @@ namespace SubwayNavigation
             return stationLabel;
         }
 
-        private Label HandleGreenLineStation(Station st, Label stationLabel)
+        private static Label HandleGreenLineStation(Station st, Label stationLabel)
         {
             Canvas.SetLeft(stationLabel, st.stationLocation.X + 2);
             Canvas.SetTop(stationLabel, st.stationLocation.Y - 13);
@@ -324,7 +326,7 @@ namespace SubwayNavigation
         public void ResetPathDisplay()
         {
             startStationMark.Stroke = Brushes.Transparent;
-            endStationMark.Stroke = Brushes.Transparent; 
+            endStationMark.Stroke = Brushes.Transparent;
             RemoveWay("resultWay");
             lvWay.ItemsSource = null;
             movingPoint.RadiusX = 0;
@@ -379,7 +381,7 @@ namespace SubwayNavigation
             Storyboard pathAnimationStoryboard = new Storyboard();
             pathAnimationStoryboard.Children.Add(animation);
 
-            movingObjectPath.Loaded += delegate (object sender, RoutedEventArgs e)
+            movingObjectPath.Loaded += delegate
             {
                 pathAnimationStoryboard.Begin(this);
             };
@@ -392,7 +394,8 @@ namespace SubwayNavigation
             if (reset)
             {
                 ResetPathDisplay();
-                cbFromStation.SelectedIndex = cbToStation.SelectedIndex = -1;
+                cbFromStation.SelectedIndex = -1;
+                cbToStation.SelectedIndex = -1;
             }
 
             var mouseWasDownOn = e.Source as FrameworkElement;
@@ -435,7 +438,8 @@ namespace SubwayNavigation
                     startStationMark.Stroke = Brushes.Transparent;
                     endStationMark.Stroke = Brushes.Transparent;
                 }
-                startClicked = endClicked = false;
+                startClicked = false;
+                endClicked = false;
             }
         }
 
@@ -474,7 +478,7 @@ namespace SubwayNavigation
                     AnimatePath(result);
                     reset = true;
                 }
-                else if (fromStation == toStation)
+                else
                 {
                     MessageBox.Show("You're already at you destination point - " + toStation.stationName);
                 }

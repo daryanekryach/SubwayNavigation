@@ -39,3 +39,4 @@ D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\MainWindow
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.g.resources
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.Properties.Resources.resources
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csproj.GenerateResource.Cache
+D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csprojResolveAssemblyReference.cache
