@@ -6,8 +6,8 @@
 
 # Build results
 Debug/
-bin/
-obj/
+bin/**
+obj/**
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -46,5 +46,6 @@ obj/
 # but keep track of directories ending in .cache
 !*.cache/
 
-#JetBrains
+
+# Common IntelliJ Platform excludes
 .idea/
