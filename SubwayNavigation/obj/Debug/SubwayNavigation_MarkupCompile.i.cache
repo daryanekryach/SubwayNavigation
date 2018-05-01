@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\
+=======
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\
+>>>>>>> f8d2b9a... initial commit
 SubwayNavigation
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\App.xaml
+=======
+H:\09.05.2017\SubwayNavigation\SubwayNavigation\App.xaml
+>>>>>>> f8d2b9a... initial commit
 11151548125
 
 111008804915
