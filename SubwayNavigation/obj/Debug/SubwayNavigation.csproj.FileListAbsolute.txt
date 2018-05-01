@@ -26,7 +26,6 @@ H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\MainWindow.baml
 H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.g.resources
 H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.Properties.Resources.resources
 H:\09.05.2017\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csproj.GenerateResource.Cache
-<<<<<<< HEAD
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\bin\Debug\SubwayNavigation.exe.config
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.exe
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.pdb
@@ -41,5 +40,3 @@ D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\MainWindow
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.g.resources
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.Properties.Resources.resources
 D:\Visual Studio\Projects\SubwayNavigation\SubwayNavigation\obj\Debug\SubwayNavigation.csproj.GenerateResource.Cache
-=======
->>>>>>> f8d2b9a... initial commit

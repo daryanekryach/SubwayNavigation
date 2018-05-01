@@ -15,11 +15,11 @@ namespace SubwayNavigation
     /// </summary>
     public partial class MainWindow : Window
     {
-        SubwayGraph subwayGraph = new SubwayGraph();
-        List<System.Windows.Shapes.Path> stationsPathMark = new List<System.Windows.Shapes.Path>();
-        List<Station> resultPath = new List<Station>();
-        EllipseGeometry movingPoint = new EllipseGeometry();
-        double radius = 6;
+        private SubwayGraph subwayGraph = new SubwayGraph();
+        private readonly List<System.Windows.Shapes.Path> stationsPathMark = new List<System.Windows.Shapes.Path>();
+        private List<Station> resultPath = new List<Station>();
+        private EllipseGeometry movingPoint = new EllipseGeometry();
+        private double radius = 6;
 
         public MainWindow()
         {
